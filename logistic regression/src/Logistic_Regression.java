@@ -21,28 +21,17 @@ public class Logistic_Regression {
 
 
 	public static void main(String[] args) throws FileNotFoundException {
-
+		
+		//add a data file. Needs to include inputs and labels 	
 		List<vector> vectors = read_inputs_and_labels("data.txt");
-
-		Logistic_Regression logistic_regression = new Logistic_Regression(5);
+		
+		//add number of features based on the given data 
+		//Logistic_Regression logistic_regression = new Logistic_Regression(fill in here the number of features);
 
 		logistic_regression.train(vectors);
 		
-		int[] x1 = new int[5] , x2 = new int[5];
 		
-		for (int i = 0; i < 5 ; i ++) {
-			
-			x1[i] = (int) (Math.random() * 3 );
-		
-			x2[i] = (int) (Math.random() * 3 ); 
-			
-		}
-
-	
-
-		System.out.println("prob(1|x) = " + logistic_regression.classification(x1));
-
-		System.out.println("prob(1|x2) = " + logistic_regression.classification(x2));
+		//add new inputs as you wish and check their likelihood
 
 	}
 
